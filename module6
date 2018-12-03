@@ -1,0 +1,49 @@
+#module6 program1
+class Spaceship:
+    landinggear = False
+    parachute = False
+    def __init__(self,astronauts,jets):
+        self.astronauts = astronauts
+        self.jets = jets
+    def landinggearextension(self):
+        self.landinggear = True
+    def parachuteextension(self):
+        self.parachute = True
+    def string(self):
+        print ("Your spaceship has " , self.astronauts , "astronauts , ",  self.jets , "jets, stored landing gear, and parachute. " )
+        if self.jets > 1:
+            print ("The spaceship is taking off")
+            print ("Your spaceship is exploring")
+            print ("Your spaceship is heading back to earth")
+            if self.landinggear == True and self.parachute == True:
+                print ("The landing gear and parachute have been extended!")
+                print ("Your ship has arrived safely back on Earth.")
+            else:
+                print ("Oh no! Your landing gear and parachute weren't extended!The expedition ended in failure.")
+test =Spaceship(10,4)
+test.string()
+test.landinggearextension()
+test.parachuteextension()
+test.string()
+#module6program2
+class book():
+    open = True
+    def __init__(self, title):
+        self.title = title
+    def closebook(self):
+        self.open= False
+    def openbook(self):
+        self.open = True
+    def string(self):
+        print ("You closed the book")
+        if self.open == True:
+            print ("You have opened the book.")
+            print ("The title of the book is " , (self.title))
+            print ("It was the best of times, it was the worst of times..")
+        if self.open == False:
+            print ("You tried to read the closed book. It has a nice picture on the front. Open the book first")
+test = book("A tale of Two Cities")
+test.closebook()
+test.string()
+test.openbook()
+test.string()
